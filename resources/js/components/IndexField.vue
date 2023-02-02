@@ -19,7 +19,7 @@ export default {
             const keys = Object.keys(this.field.values);
             const values = Object.values(this.field.values);
             const indexOfValue = values.findIndex(item => item == this.field.value+'' );
-            return keys[indexOfValue];
+            return keys[indexOfValue] !== undefined ?  keys[indexOfValue] : '--';
         },
     }
 

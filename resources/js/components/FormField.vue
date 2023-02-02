@@ -6,22 +6,22 @@
     :full-width-content="fullWidthContent"
   >
     <template #field>
-      <div class="flex flex-col sm:flex-row sm:flex-wrap justify-between gap-y-6 ">
-          <div v-for="(value, key) in this.field.values" :key="key" class="flex">
+      <div class="flex flex-col big-scereen-list justify-between gap-y-6 ">
+          <fieldset v-for="(value, key) in this.field.values" :key="key" class="flex">
               <input
               :id="this.field.uuid+key"
               :name="field.name"
               type="radio"
               @input="handleChange"
               :value="value"
-              class="h-5 w-5 border-gray-300 focus:ring-2 focus:ring-blue-300"
+              class="h-5 w-5 border-gray-300 focus:ring-2 focus:ring-blue-300 bg-green-500"
               :class="errorClasses"
               :checked="this.value !== '' && this.value == value || this.field.initialValue === value"
               >
               <label :for="this.field.uuid+key" class="whitespace-nowrap text-sm font-medium text-gray-900 ml-2 block text-black dark:text-white">
               {{ key }}
               </label>
-          </div>
+          </fieldset>
       </div>
     </template>
   </DefaultField>
@@ -62,3 +62,13 @@ export default {
   }
 };
 </script>
+<style scoped>
+
+/* Medium devices (landscape tablets, 768px and less) */
+@media only screen and (min-width: 640px) {
+  .big-scereen-list{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+</style>

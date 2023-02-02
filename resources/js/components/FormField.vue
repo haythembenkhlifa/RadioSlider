@@ -6,7 +6,8 @@
     :full-width-content="fullWidthContent"
   >
     <template #field>
-      <div class="flex flex-col big-scereen-list justify-between" style="grid-row-gap: 1.5rem;row-gap: 1.5rem;">
+      <div class="flex flex-col big-scereen-list justify-between" 
+           style="grid-row-gap: 1.5rem; row-gap: 1.5rem;">
           <fieldset v-for="(value, key) in this.field.values" :key="key" class="flex">
               <input
               :id="this.field.uuid+key"

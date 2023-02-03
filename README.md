@@ -12,9 +12,10 @@ composer require haythem/radio-slider
 
         public function fields(Request $request)
         {
-
+            
+            // Please note that the radio buttons are grouped by the field name.
               return [
-                        RadioSlider::make("Marks Slider", "custom_field")
+                        RadioSlider::make("Radio Slider", "custom_field")
                             ->setValues(['Not Likely' => 0, 'Maybe' => 'maybe', 'Very likely' => 'very likely'])
                             ->initialValue(4)//this will select the default value if there is nothing on the database.
               ];

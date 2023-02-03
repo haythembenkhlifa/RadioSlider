@@ -155,13 +155,7 @@ __webpack_require__.r(__webpack_exports__);
 var _withScopeId = function _withScopeId(n) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-c023248a"), n = n(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)(), n;
 };
-var _hoisted_1 = {
-  "class": "flex flex-col big-scereen-list justify-between",
-  style: {
-    "grid-row-gap": "1.5rem",
-    "row-gap": "1.5rem"
-  }
-};
+var _hoisted_1 = ["id"];
 var _hoisted_2 = ["id", "name", "value", "checked"];
 var _hoisted_3 = ["for"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -174,8 +168,15 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "full-width-content": _ctx.fullWidthContent
   }, {
     field: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_this.field.values, function (value, key) {
-        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("fieldset", {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+        "class": "flex flex-col list justify-between",
+        style: {
+          "grid-row-gap": "1.5rem",
+          "row-gap": "1.5rem"
+        },
+        id: _this.field.uuid
+      }, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_this.field.values, function (value, key) {
+        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
           key: key,
           "class": "flex"
         }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
@@ -192,9 +193,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           "for": _this.field.uuid + key,
           "class": "whitespace-nowrap text-sm font-medium text-gray-900 ml-2 block text-black dark:text-white"
         }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(key), 9 /* TEXT, PROPS */, _hoisted_3)]);
-      }), 128 /* KEYED_FRAGMENT */))])];
+      }), 128 /* KEYED_FRAGMENT */))], 8 /* PROPS */, _hoisted_1)];
     }),
-
     _: 1 /* STABLE */
   }, 8 /* PROPS */, ["field", "errors", "show-help-text", "full-width-content"]);
 }
@@ -1485,7 +1485,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\r\n\r\n/* Medium devices (landscape tablets, 768px and less) */\n@media only screen and (min-width: 640px) {\n.big-scereen-list[data-v-c023248a]{\r\n    flex-direction: row;\r\n    flex-wrap: wrap;\n}\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n\r\n/* Medium devices (landscape tablets, 768px and less) */\n@media only screen and (min-width: 640px) {\n.list[data-v-c023248a]{\r\n    flex-direction: row;\r\n    flex-wrap: wrap;\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

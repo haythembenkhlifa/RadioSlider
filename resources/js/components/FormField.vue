@@ -6,9 +6,9 @@
     :full-width-content="fullWidthContent"
   >
     <template #field>
-      <div class="flex flex-col big-scereen-list justify-between" 
-           style="grid-row-gap: 1.5rem; row-gap: 1.5rem;">
-          <fieldset v-for="(value, key) in this.field.values" :key="key" class="flex">
+      <form class="flex flex-col list justify-between" 
+           style="grid-row-gap: 1.5rem; row-gap: 1.5rem;" :id="this.field.uuid">
+            <div v-for="(value, key) in this.field.values" :key="key" class="flex">
               <input
               :id="this.field.uuid+key"
               :name="field.name"
@@ -22,8 +22,8 @@
               <label :for="this.field.uuid+key" class="whitespace-nowrap text-sm font-medium text-gray-900 ml-2 block text-black dark:text-white">
               {{ key }}
               </label>
-          </fieldset>
-      </div>
+            </div>
+          </form>
     </template>
   </DefaultField>
 </template>
@@ -67,7 +67,7 @@ export default {
 
 /* Medium devices (landscape tablets, 768px and less) */
 @media only screen and (min-width: 640px) {
-  .big-scereen-list{
+  .list{
     flex-direction: row;
     flex-wrap: wrap;
   }

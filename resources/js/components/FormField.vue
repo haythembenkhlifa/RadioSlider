@@ -15,7 +15,7 @@
               type="radio"
               @input="handleChange"
               :value="value"
-              class="h-5 w-5 border-gray-300 focus:ring-2 focus:ring-blue-300 bg-green-500"
+              class="h-5 w-5 border-gray-300 focus:ring-2 focus:ring-blue-300"
               :class="errorClasses"
               :checked="this.value !== '' && this.value == value || this.field.initialValue === value"
               >
